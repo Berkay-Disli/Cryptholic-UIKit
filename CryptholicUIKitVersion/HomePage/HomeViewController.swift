@@ -39,20 +39,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         return cell
     }
+   
     
-    /*
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if  segue.identifier == "showCoinDetails"
-                let destination = segue.destination as? DetailsViewController,
-                let index = tableView.indexPathForSelectedRow?.row
-            {
-                destination.blogName = swiftBlogs[blogIndex]
-            }
-    }
-    */
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showCoinDetails", sender: nil)
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "CoinDetailsViewController") as? CoinDetailsViewController {
+            vc.coin = coins.coins[indexPath.row]
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
     }
     
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23267C4428AE491400255905 /* CoinDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23267C4328AE491400255905 /* CoinDetailsViewController.swift */; };
 		23294A4B28AE23860016E95E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23294A4A28AE23860016E95E /* AppDelegate.swift */; };
 		23294A4D28AE23860016E95E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23294A4C28AE23860016E95E /* SceneDelegate.swift */; };
 		23294A5228AE23860016E95E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23294A5028AE23860016E95E /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23267C4328AE491400255905 /* CoinDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailsViewController.swift; sourceTree = "<group>"; };
 		23294A4728AE23860016E95E /* CryptholicUIKitVersion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptholicUIKitVersion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23294A4A28AE23860016E95E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23294A4C28AE23860016E95E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		23294A6028AE23EC0016E95E /* DetailsPage */ = {
 			isa = PBXGroup;
 			children = (
+				23267C4328AE491400255905 /* CoinDetailsViewController.swift */,
 			);
 			path = DetailsPage;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			files = (
 				23294A4B28AE23860016E95E /* AppDelegate.swift in Sources */,
 				23DD472728AE259000FC52EB /* HomeCoinTableViewCell.swift in Sources */,
+				23267C4428AE491400255905 /* CoinDetailsViewController.swift in Sources */,
 				23294A4D28AE23860016E95E /* SceneDelegate.swift in Sources */,
 				23294A6428AE24A60016E95E /* Coins.swift in Sources */,
 				23294A6228AE241A0016E95E /* HomeViewController.swift in Sources */,
