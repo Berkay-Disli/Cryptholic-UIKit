@@ -127,12 +127,23 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Prz-pM-da6" userLabel="InfoVStack">
                                                 <rect key="frame" x="0.0" y="0.0" width="225" height="91.666666666666671"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iX2-AH-khe">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XuK-5N-UaQ">
                                                         <rect key="frame" x="0.0" y="0.0" width="225" height="28.666666666666668"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                        <color key="textColor" systemColor="systemGrayColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iX2-AH-khe">
+                                                                <rect key="frame" x="0.0" y="0.0" width="196" height="28.666666666666668"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                                <color key="textColor" systemColor="systemGrayColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XVG-7h-4UG">
+                                                                <rect key="frame" x="196" y="0.0" width="29" height="28.666666666666668"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="29" id="CyT-Zb-6uI"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="USD 23,384.49" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INE-cP-f13">
                                                         <rect key="frame" x="0.0" y="30.666666666666671" width="225" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
@@ -177,7 +188,6 @@
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3md-aO-9ws">
                                         <rect key="frame" x="0.0" y="101.66666666666663" width="388" height="627"/>
-                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sEs-fz-z3f" userLabel="TimeZoneStack">
                                         <rect key="frame" x="0.0" y="738.66666666666663" width="388" height="39.333333333333371"/>
@@ -277,6 +287,10 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="sEs-fz-z3f" firstAttribute="top" secondItem="3md-aO-9ws" secondAttribute="bottom" constant="10" id="S79-oj-rVB"/>
+                                    <constraint firstItem="3md-aO-9ws" firstAttribute="top" secondItem="5Z3-3w-soe" secondAttribute="bottom" constant="10" id="TbR-cU-Baq"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OuO-VQ-n0a"/>
@@ -293,6 +307,8 @@
                         <outlet property="coinNameLabel" destination="iX2-AH-khe" id="dTH-fK-66V"/>
                         <outlet property="coinPriceLabel" destination="INE-cP-f13" id="pso-Gu-Tkn"/>
                         <outlet property="dayButton" destination="Ktk-kw-EnW" id="eCS-Zt-9HY"/>
+                        <outlet property="iconImage" destination="XVG-7h-4UG" id="V6e-xn-u0u"/>
+                        <outlet property="lineChartViewLabel" destination="3md-aO-9ws" id="6ay-lJ-YGq"/>
                         <outlet property="monthButton" destination="J5W-HY-Fo0" id="kt0-Kz-2d9"/>
                         <outlet property="priceChangeLabel" destination="yhp-uc-gvT" id="sey-uJ-7Q4"/>
                         <outlet property="sixMonthsButton" destination="G5I-BA-hkH" id="sJU-4o-zNm"/>
@@ -330,9 +346,6 @@
         <image name="slider.vertical.3" catalog="system" width="128" height="111"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

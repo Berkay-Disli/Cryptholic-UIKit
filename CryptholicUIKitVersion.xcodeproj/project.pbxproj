@@ -18,6 +18,7 @@
 		23294A6228AE241A0016E95E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23294A6128AE241A0016E95E /* HomeViewController.swift */; };
 		23294A6428AE24A60016E95E /* Coins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23294A6328AE24A60016E95E /* Coins.swift */; };
 		23DD472728AE259000FC52EB /* HomeCoinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DD472628AE259000FC52EB /* HomeCoinTableViewCell.swift */; };
+		23F2BCEC28AE5CBF00BC016E /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 23F2BCEB28AE5CBF00BC016E /* Charts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23267C4728AE54EB00255905 /* Kingfisher in Frameworks */,
+				23F2BCEC28AE5CBF00BC016E /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +133,7 @@
 			name = CryptholicUIKitVersion;
 			packageProductDependencies = (
 				23267C4628AE54EB00255905 /* Kingfisher */,
+				23F2BCEB28AE5CBF00BC016E /* Charts */,
 			);
 			productName = CryptholicUIKitVersion;
 			productReference = 23294A4728AE23860016E95E /* CryptholicUIKitVersion.app */;
@@ -162,6 +165,7 @@
 			mainGroup = 23294A3E28AE23860016E95E;
 			packageReferences = (
 				23267C4528AE54EB00255905 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				23F2BCEA28AE5CBF00BC016E /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = 23294A4828AE23860016E95E /* Products */;
 			projectDirPath = "";
@@ -424,6 +428,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		23F2BCEA28AE5CBF00BC016E /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -431,6 +443,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 23267C4528AE54EB00255905 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		23F2BCEB28AE5CBF00BC016E /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 23F2BCEA28AE5CBF00BC016E /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
