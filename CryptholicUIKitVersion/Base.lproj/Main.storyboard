@@ -184,6 +184,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ktk-kw-EnW">
                                                 <rect key="frame" x="0.0" y="0.0" width="64.666666666666671" height="39.333333333333336"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="24H">
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="21"/>
@@ -195,10 +196,11 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h85-Zz-u6o">
                                                 <rect key="frame" x="64.666666666666657" y="0.0" width="64.666666666666657" height="39.333333333333336"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="1W">
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="21"/>
-                                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                                    <color key="baseForegroundColor" systemColor="systemGrayColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="weekButtonTapped:" destination="5mT-Xf-goA" eventType="touchUpInside" id="I1V-0p-RaU"/>
@@ -206,10 +208,11 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5W-HY-Fo0">
                                                 <rect key="frame" x="129.33333333333334" y="0.0" width="64.666666666666657" height="39.333333333333336"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="1M">
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="21"/>
-                                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                                    <color key="baseForegroundColor" systemColor="systemGrayColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="monthButtonTapped:" destination="5mT-Xf-goA" eventType="touchUpInside" id="QY3-f3-a6a"/>
@@ -217,10 +220,11 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9b-8r-dzn">
                                                 <rect key="frame" x="194" y="0.0" width="64.666666666666686" height="39.333333333333336"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="3M">
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="21"/>
-                                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                                    <color key="baseForegroundColor" systemColor="systemGrayColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="threeMonthsButtonTapped:" destination="5mT-Xf-goA" eventType="touchUpInside" id="P9s-jZ-LFP"/>
@@ -228,10 +232,11 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5I-BA-hkH">
                                                 <rect key="frame" x="258.66666666666669" y="0.0" width="64.666666666666686" height="39.333333333333336"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="6M">
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="21"/>
-                                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                                    <color key="baseForegroundColor" systemColor="systemGrayColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="sixMonthsButtonTapped:" destination="5mT-Xf-goA" eventType="touchUpInside" id="Cru-Zt-lWh"/>
@@ -239,10 +244,11 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70t-44-ojD">
                                                 <rect key="frame" x="323.33333333333331" y="0.0" width="64.666666666666686" height="39.333333333333336"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="1Y">
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="21"/>
-                                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                                    <color key="baseForegroundColor" systemColor="systemGrayColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="yearButtonTapped:" destination="5mT-Xf-goA" eventType="touchUpInside" id="Wos-yO-WIC"/>
@@ -286,7 +292,13 @@
                     <connections>
                         <outlet property="coinNameLabel" destination="iX2-AH-khe" id="dTH-fK-66V"/>
                         <outlet property="coinPriceLabel" destination="INE-cP-f13" id="pso-Gu-Tkn"/>
+                        <outlet property="dayButton" destination="Ktk-kw-EnW" id="eCS-Zt-9HY"/>
+                        <outlet property="monthButton" destination="J5W-HY-Fo0" id="kt0-Kz-2d9"/>
                         <outlet property="priceChangeLabel" destination="yhp-uc-gvT" id="sey-uJ-7Q4"/>
+                        <outlet property="sixMonthsButton" destination="G5I-BA-hkH" id="sJU-4o-zNm"/>
+                        <outlet property="threeMonthsButton" destination="Z9b-8r-dzn" id="ib0-19-rAz"/>
+                        <outlet property="weekButton" destination="h85-Zz-u6o" id="Djo-y8-kkY"/>
+                        <outlet property="yearButton" destination="70t-44-ojD" id="QUl-RU-sqZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mo1-cd-7N2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

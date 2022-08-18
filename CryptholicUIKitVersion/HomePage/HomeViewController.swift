@@ -35,7 +35,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.nameLabel.text = coins.coins[indexPath.row].name
         cell.symbolLabel.text = coins.coins[indexPath.row].symbol
         cell.priceLabel.text = Double(round(10000 * coins.coins[indexPath.row].price) / 10000).formatted()
-        
+        cell.iconImage.setImage(imageUrl: coins.coins[indexPath.row].icon)
         
         return cell
     }
