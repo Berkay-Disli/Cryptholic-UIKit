@@ -37,22 +37,23 @@ class CoinDetailsViewController: UIViewController, ChartViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
+        
+        getCoinDetailsData(coin: coin)
+
         lineChart.delegate = self
+        
+        lineChart.frame = lineChartViewLabel.frame
+        lineChart.center = lineChartViewLabel.center
+        lineChart.frame = lineChart.frame.offsetBy(dx: CGFloat(0), dy: CGFloat(-120))
+        
+        lineChartViewLabel.addSubview(lineChart)
+        
+        
         iconImage.setImage(imageUrl: coin.icon)
         coinNameLabel.text = coin.name
         coinPriceLabel.text = "\(coin.price.formatted())"
         priceChangeLabel.text = "\(coin.priceChange1d ?? 0)"
         
-        
-    }
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        lineChart.frame = lineChartViewLabel.frame
-        lineChart.center = lineChartViewLabel.center
-        lineChart.drawGridBackgroundEnabled = false
-        lineChartViewLabel.addSubview(lineChart)
-        getCoinDetailsData(coin: coin)
         
     }
     
@@ -71,8 +72,17 @@ class CoinDetailsViewController: UIViewController, ChartViewDelegate {
                         }
                         let set = LineChartDataSet(entries: entries)
                         set.colors = ChartColorTemplates.liberty()
+                        set.drawCirclesEnabled = false
+                        set.lineWidth = 1.7
+                        set.colors = [.red]
                         let data = LineChartData(dataSet: set)
-                        self.lineChart.drawMarkers = false
+                        self.lineChart.drawGridBackgroundEnabled = true
+                        self.lineChart.gridBackgroundColor = .white
+                        self.lineChart.xAxis.enabled = false
+                        self.lineChart.leftAxis.enabled = false
+                        self.lineChart.rightAxis.enabled = false
+                        self.lineChart.chartDescription.enabled = false
+                        self.lineChart.legend.enabled = false
                         self.lineChart.data = data
                         
                     }
