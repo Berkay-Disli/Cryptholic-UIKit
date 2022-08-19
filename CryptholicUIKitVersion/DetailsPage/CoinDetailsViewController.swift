@@ -15,7 +15,8 @@ class CoinDetailsViewController: UIViewController, ChartViewDelegate {
     var coin = Coin(id: "", icon: "", name: "", symbol: "", rank: 0, price: 0, priceBtc: 0, volume: 0, marketCap: 0, availableSupply: 0, totalSupply: 0, priceChange1h: 0, priceChange1d: 0, priceChange1w: 0, websiteURL: "", twitterURL: "", exp: [""], contractAddress: "", decimals: 0, redditURL: "")
     private var selectedTimeZone: TimezoneRanges = .day
     
-    @IBOutlet weak var lineChartViewLabel: UIView!
+    
+    @IBOutlet weak var lineChartViewLabel: LineChartView!
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var coinNameLabel: UILabel!
     @IBOutlet weak var coinPriceLabel: UILabel!
@@ -50,7 +51,7 @@ class CoinDetailsViewController: UIViewController, ChartViewDelegate {
         lineChart.frame = lineChartViewLabel.frame
         lineChart.center = lineChartViewLabel.center
         lineChart.drawGridBackgroundEnabled = false
-        view.addSubview(lineChart)
+        lineChartViewLabel.addSubview(lineChart)
         getCoinDetailsData(coin: coin)
         
     }

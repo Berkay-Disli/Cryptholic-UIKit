@@ -186,7 +186,7 @@
                                             <constraint firstAttribute="height" constant="91.670000000000002" id="gW2-67-bMw"/>
                                         </constraints>
                                     </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3md-aO-9ws">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3md-aO-9ws" customClass="LineChartView" customModule="Charts">
                                         <rect key="frame" x="0.0" y="101.66666666666663" width="388" height="627"/>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sEs-fz-z3f" userLabel="TimeZoneStack">
@@ -288,8 +288,12 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="sEs-fz-z3f" firstAttribute="top" secondItem="3md-aO-9ws" secondAttribute="bottom" constant="10" id="S79-oj-rVB"/>
-                                    <constraint firstItem="3md-aO-9ws" firstAttribute="top" secondItem="5Z3-3w-soe" secondAttribute="bottom" constant="10" id="TbR-cU-Baq"/>
+                                    <constraint firstAttribute="trailing" secondItem="3md-aO-9ws" secondAttribute="trailing" id="0D2-AO-4bJ"/>
+                                    <constraint firstItem="3md-aO-9ws" firstAttribute="leading" secondItem="RJC-6s-vMK" secondAttribute="leading" id="2VW-tQ-HkR"/>
+                                    <constraint firstItem="sEs-fz-z3f" firstAttribute="top" secondItem="3md-aO-9ws" secondAttribute="bottom" constant="10" id="X2B-2U-VJu"/>
+                                    <constraint firstItem="3md-aO-9ws" firstAttribute="top" secondItem="5Z3-3w-soe" secondAttribute="bottom" constant="10" id="l4K-1d-LYG"/>
+                                    <constraint firstAttribute="bottom" secondItem="rBW-1u-kCo" secondAttribute="bottom" id="pHD-II-TdQ"/>
+                                    <constraint firstItem="5Z3-3w-soe" firstAttribute="top" secondItem="RJC-6s-vMK" secondAttribute="top" id="rjW-TY-z8n"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -308,7 +312,7 @@
                         <outlet property="coinPriceLabel" destination="INE-cP-f13" id="pso-Gu-Tkn"/>
                         <outlet property="dayButton" destination="Ktk-kw-EnW" id="eCS-Zt-9HY"/>
                         <outlet property="iconImage" destination="XVG-7h-4UG" id="V6e-xn-u0u"/>
-                        <outlet property="lineChartViewLabel" destination="3md-aO-9ws" id="6ay-lJ-YGq"/>
+                        <outlet property="lineChartViewLabel" destination="3md-aO-9ws" id="oFb-1H-65t"/>
                         <outlet property="monthButton" destination="J5W-HY-Fo0" id="kt0-Kz-2d9"/>
                         <outlet property="priceChangeLabel" destination="yhp-uc-gvT" id="sey-uJ-7Q4"/>
                         <outlet property="sixMonthsButton" destination="G5I-BA-hkH" id="sJU-4o-zNm"/>
@@ -326,8 +330,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aJE-2b-VHV" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nuw-57-zeZ">
-                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Nuw-57-zeZ">
+                        <rect key="frame" x="0.0" y="44" width="428" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

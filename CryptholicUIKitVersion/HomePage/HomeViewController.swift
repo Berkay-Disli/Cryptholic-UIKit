@@ -7,10 +7,12 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet weak var tableView: UITableView!
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating {
     
+    @IBOutlet weak var tableView: UITableView!
+    let searchController = UISearchController()
     var coins = Coins(coins: [Coin]())
+    private var coinsCopy = Coins(coins: [Coin]())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +23,22 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         title = "Home"
         navigationItem.largeTitleDisplayMode = .always
+        searchController.searchResultsUpdater = self
+        navigationItem.searchController = searchController
         
         getData()
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let searchText = searchController.searchBar.text else { return }
+        
+        self.coins = Coins(coins: coinsCopy.coins.filter { $0.name.contains(searchText)})
+        
+        if searchText.isEmpty {
+            coins = coinsCopy
+        }
+         
+        tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -62,6 +78,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                     let result = try JSONDecoder().decode(Coins.self, from: data)
                     DispatchQueue.main.async {
                         self.coins = result
+                        self.coinsCopy = result
                         self.tableView.reloadData()
                     }
                 } catch let err {
