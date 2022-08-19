@@ -12,7 +12,9 @@ class HomeCoinTableViewCell: UITableViewCell {
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var symbolLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var pricaLabel: UILabel!
+    @IBOutlet weak var pricaChangeLabel: UILabel!
+    @IBOutlet weak var percentSymbolLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

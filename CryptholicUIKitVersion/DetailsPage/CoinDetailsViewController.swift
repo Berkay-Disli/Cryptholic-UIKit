@@ -36,7 +36,7 @@ class CoinDetailsViewController: UIViewController, ChartViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationItem.largeTitleDisplayMode = .never
         lineChart.delegate = self
         iconImage.setImage(imageUrl: coin.icon)
         coinNameLabel.text = coin.name
@@ -55,23 +55,6 @@ class CoinDetailsViewController: UIViewController, ChartViewDelegate {
         getCoinDetailsData(coin: coin)
         
     }
-    
-    /*
-    func chartSettings() {
-        let set = LineChartDataSet(entries: [
-            ChartDataEntry(x: Double(0), y: Double(1)),
-            ChartDataEntry(x: Double(1), y: Double(4)),
-            ChartDataEntry(x: Double(2), y: Double(2)),
-            ChartDataEntry(x: Double(3), y: Double(8)),
-            ChartDataEntry(x: Double(4), y: Double(5))
-        ])
-        set.colors = ChartColorTemplates.material()
-        let data = LineChartData(dataSet: set)
-        
-        
-        lineChart.data = data
-    }
-     */
     
     func getCoinDetailsData(coin: Coin) {
             guard let url = URL(string: "https://api.coinstats.app/public/v1/charts?period=24h&coinId=\(coin.id)") else { return }
@@ -104,7 +87,7 @@ class CoinDetailsViewController: UIViewController, ChartViewDelegate {
     
     
     
-    // MARK: Codes below are NOT working properly...
+    // MARK: Codes below are garbage
     @IBAction func dayButtonTapped(_ sender: Any) {
         dayButton.titleLabel?.textColor = .red
         weekButton.titleLabel?.textColor = .systemGray

@@ -21,9 +21,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.dataSource = self
         
         
-        title = "Home"
+        title = "Coins"
         navigationItem.largeTitleDisplayMode = .always
         searchController.searchResultsUpdater = self
+        searchController.searchBar.placeholder = "Search for a coin"
         navigationItem.searchController = searchController
         
         getData()
@@ -50,7 +51,20 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.nameLabel.text = coins.coins[indexPath.row].name
         cell.symbolLabel.text = coins.coins[indexPath.row].symbol
-        cell.priceLabel.text = Double(round(10000 * coins.coins[indexPath.row].price) / 10000).formatted()
+        cell.pricaLabel.text = Double(round(10000 * coins.coins[indexPath.row].price) / 10000).formatted()
+        cell.pricaChangeLabel.text = String(coins.coins[indexPath.row].priceChange1d ?? 0)
+        if let ratio = coins.coins[indexPath.row].priceChange1d {
+            if ratio < 0.0 {
+                cell.pricaChangeLabel.textColor = .red
+                cell.percentSymbolLabel.textColor = .red
+            } else if ratio > 0.0 {
+                cell.pricaChangeLabel.textColor = .green
+                cell.percentSymbolLabel.textColor = .green
+            } else {
+                cell.pricaChangeLabel.textColor = .darkGray
+                cell.percentSymbolLabel.textColor = .darkGray
+            }
+        }
         cell.iconImage.setImage(imageUrl: coins.coins[indexPath.row].icon)
         
         return cell
@@ -59,6 +73,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         if let vc = storyboard?.instantiateViewController(withIdentifier: "CoinDetailsViewController") as? CoinDetailsViewController {
             vc.coin = coins.coins[indexPath.row]
             self.navigationController?.pushViewController(vc, animated: true)
